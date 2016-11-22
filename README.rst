@@ -58,7 +58,7 @@ WordPurify Methods
 Once setup if finished, you can simply call each method::
 
     out = purify.check('Some nice words')
-    print out
+    print(out)
     # {u'rsp': {u'@attributes': {u'stat': u'ok'}, u'found': u'0', u'api_key': u'*********', u'method':  u'webpurify.live.check', u'format': u'rest'}}
 
 The following WordPurify methods are included:
@@ -74,8 +74,8 @@ The following WordPurify methods are included:
 * `get_blacklist <https://www.webpurify.com/documentation/methods/getblacklist/>`_
 * `get_whitelist <https://www.webpurify.com/documentation/methods/getwhitelist/>`_
 
-**Note:** 
-  you should be able to set most of the options in the function call except for format. Format is determined at WordPurify  
+**Note:**
+  you should be able to set most of the options in the function call except for format. Format is determined at WordPurify
   creation. In this example, `rsp=1` will give us the response time and `slink=1` will tell WebPurify to flag urls::
 
       purify.check('Some nice words', rsp=1, slink=1)
